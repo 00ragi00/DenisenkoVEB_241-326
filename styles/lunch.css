@@ -1,0 +1,95 @@
+/* Секции меню */
+
+.menu-section {
+    margin-bottom: 30px;
+}
+
+/* Grid для блока с блюдами: 3 колонки */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Карточка блюда: Flex по вертикали */
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 35px;
+    cursor: pointer;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    background-color: #f7f7f7;
+    transition: border 0.2s ease;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+/* Ховер: рамка tomato и изменение кнопки через контекстный селектор */
+
+.menu-item:hover {
+    border: 2px solid #ce9c64;
+}
+
+.menu-item:hover button {
+    background-color: #777777;
+    color: #f7f7f7;
+}
+
+/* Изображение */
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 35px;
+    margin-bottom: 15px;
+}
+
+/* Текстовые элементы */
+
+.menu-price {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.menu-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Вес/объём — серый текст, «прижатый» к низу карточки */
+
+.menu-weight {
+    color: #777777;
+    margin-top: auto;
+}
+
+/* Кнопка */
+
+.menu-item button {
+    margin-top: 15px;
+    padding: 10px 30px;
+    background-color: #f1eee9;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Адаптивность меню: ≤800px — 2 колонки */
+
+@media (max-width: 800px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Адаптивность меню: ≤600px — 1 колонка */
+
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
