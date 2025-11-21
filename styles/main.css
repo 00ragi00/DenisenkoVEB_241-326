@@ -36,9 +36,9 @@ header h1 {
 /* Навигация */
 nav {
     display: flex;
-    gap: 30px; /* или 15px, по макету */
-    justify-content: flex-start; /* строго под заголовком */
-    margin-top: 10px; /* если нужно отступить от заголовка */
+    gap: 30px; 
+    justify-content: flex-start;
+    margin-top: 10px; 
 }
 
 nav a {
@@ -54,12 +54,12 @@ nav a {
     background: #fff;
     border-radius: 6px;
     box-sizing: border-box;
-    border: 2px solid transparent; /* всегда ровно, чтобы не прыгало */
+    border: 2px solid transparent; 
     transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
 nav a#active {
-    border: 2px solid #ce9c64;  /* тонкая рамка по краю */
+    border: 2px solid #ce9c64; 
     color: #222;
     background: #fff;
 }
@@ -67,7 +67,7 @@ nav a#active {
 nav a:hover {
     background: #ce9c64;
     color: #fff;
-    border: 2px solid #ce9c64; /* совпадает с фоном, эффект “полное окрашивание” */
+    border: 2px solid #ce9c64;
 }
 
 
@@ -160,3 +160,4 @@ footer a {
 footer a:hover {
     color: #f7f7f7;
 }
+
