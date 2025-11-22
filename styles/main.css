@@ -39,6 +39,7 @@ nav {
     gap: 30px; 
     justify-content: flex-start;
     margin-top: 10px; 
+    width: 100%;
 }
 
 nav a {
@@ -160,4 +161,5 @@ footer a {
 footer a:hover {
     color: #f7f7f7;
 }
+
 
