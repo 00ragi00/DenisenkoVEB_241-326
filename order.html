@@ -1,11 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Заказы — CityLunch</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+        <!-- Стили -->
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    <body>
+        <header>
+            <div class="container">
+
+                <h1>CityLunch — заказы</h1>
+
+                <input type="checkbox" id="menu-toggle" />
+                <label for="menu-toggle" class="menu-btn">
+                    <span></span><span></span><span></span>
+                </label>
+
+                <nav class="nav-menu">
+                    <a href="Index.html">Главная</a>
+                    <a href="lunch.html">Собрать ланч</a>
+                    <a href="order.html" id="active">Заказы</a>
+                    <a href="#contacts">Контакты</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <section>
+                <h2>Ваши заказы</h2>
+                <p>В этом разделе будут отображаться ваши заказы. Пока раздел пуст — вы можете перейти на страницу «Собрать ланч» и добавить блюда в корзину.</p>
+            </section>
+        </main>
+
+        <footer id="contacts">
+            <div class="container">
+                <p>© 2025 CityLunch</p>
+                <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+                <p>E-mail: <a href="mailto:info@citylunch.ru">info@citylunch.ru</a></p>
+                <p>Адрес: г. Москва, ул. Примерная, д. 10</p>
+            </div>
+        </footer>
+    </body>
 </html>
