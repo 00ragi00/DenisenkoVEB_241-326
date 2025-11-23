@@ -7,7 +7,7 @@
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px; /* требуемый отступ */
+    gap: 10px;
 }
 
 /* Карточка блюда: Flex по вертикали */
@@ -107,3 +107,4 @@
     outline: none;
     box-shadow: 0 0 0 3px rgba(206,156,100,0.15);
 }
+
