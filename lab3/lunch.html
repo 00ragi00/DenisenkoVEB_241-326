@@ -132,110 +132,110 @@
         </main>
         
         <section class="order-section">
-        <h2>Сделать заказ</h2>
-        
-        <form action="https://httpbin.org/post" method="POST" id="orderForm">
-            <div class="form-container">
-                
-                <div class="order-column">
-                    <h3>Ваш заказ</h3>
+            <h2>Сделать заказ</h2>
+            
+            <form action="https://httpbin.org/post" method="POST" id="orderForm">
+                <div class="form-container">
                     
-                    <div class="form-group">
-                        <label for="soup">Суп</label>
-                        <select name="soup" id="soup" required>
-                            <option value="">-- Выберите суп --</option>
-                            <option value="gaspacho">Гаспачо</option>
-                            <option value="mushroom">Грибной суп</option>
-                            <option value="norwegian">Норвежский суп</option>
-                            <option value="chicken">Куриный суп</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="main">Главное блюдо</label>
-                        <select name="main" id="main" required>
-                            <option value="">-- Выберите главное блюдо --</option>
-                            <option value="lasagna">Лазанья</option>
-                            <option value="pasta">Паста</option>
-                            <option value="steak">Стейк</option>
-                            <option value="chicken_cutlet">Куриная котлета</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="drink">Напиток</label>
-                        <select name="drink" id="drink" required>
-                            <option value="">-- Выберите напиток --</option>
-                            <option value="orange_juice">Апельсиновый сок</option>
-                            <option value="apple_juice">Яблочный сок</option>
-                            <option value="carrot_juice">Морковный сок</option>
-                            <option value="tea">Чай</option>
-                            <option value="coffee">Кофе</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="comments">Комментарий к заказу</label>
-                        <textarea name="comments" id="comments" rows="4"></textarea>
-                    </div>
-                </div>
-                
-                <div class="customer-column">
-                    <h3>Ваши данные</h3>
-                    
-                    <div class="form-group">
-                        <label for="name">Имя</label>
-                        <input type="text" name="name" id="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" required>
-                    </div>
-                    
-                    <div class="form-group checkbox-group">
-                        <input type="checkbox" name="subscribe" id="subscribe" checked>
-                        <label for="subscribe">Получать информацию о скидках и акциях</label>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Номер телефона</label>
-                        <input type="tel" name="phone" id="phone" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="address">Адрес доставки</label>
-                        <input type="text" name="address" id="address" required>
-                        <small>Доставка осуществляется только по Москве</small>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Время доставки:</label>
-                        <div class="radio-group">
-                            <input type="radio" name="delivery_time_type" id="asap" value="asap" required>
-                            <label for="asap">Как можно скорее</label>
+                    <div class="order-column">
+                        <h3>Ваш заказ</h3>
+                        
+                        <div class="form-group">
+                            <label for="soup">Суп</label>
+                            <select name="soup" id="soup" required>
+                                <option value="">-- Выберите суп --</option>
+                                <option value="gaspacho">Гаспачо</option>
+                                <option value="mushroom">Грибной суп</option>
+                                <option value="norwegian">Норвежский суп</option>
+                                <option value="chicken">Куриный суп</option>
+                            </select>
                         </div>
-                        <div class="radio-group">
-                            <input type="radio" name="delivery_time_type" id="scheduled" value="scheduled" required>
-                            <label for="scheduled">К указанному времени</label>
+                        
+                        <div class="form-group">
+                            <label for="main">Главное блюдо</label>
+                            <select name="main" id="main" required>
+                                <option value="">-- Выберите главное блюдо --</option>
+                                <option value="lasagna">Лазанья</option>
+                                <option value="pasta">Паста</option>
+                                <option value="steak">Стейк</option>
+                                <option value="chicken_cutlet">Куриная котлета</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="drink">Напиток</label>
+                            <select name="drink" id="drink" required>
+                                <option value="">-- Выберите напиток --</option>
+                                <option value="orange_juice">Апельсиновый сок</option>
+                                <option value="apple_juice">Яблочный сок</option>
+                                <option value="carrot_juice">Морковный сок</option>
+                                <option value="tea">Чай</option>
+                                <option value="coffee">Кофе</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="comments">Комментарий к заказу</label>
+                            <textarea name="comments" id="comments" rows="4"></textarea>
                         </div>
                     </div>
                     
-                    <div class="form-group">
-                        <label for="delivery_time">Укажите время доставки</label>
-                        <input type="time" name="delivery_time" id="delivery_time" 
-                               min="07:00" max="23:00" step="300">
-                        <small>Доступное время доставки с 7:00 до 23:00</small>
-                    </div>
-                    
-                    <div class="button-group">
-                        <button type="reset">Сбросить</button>
-                        <button type="submit">Отправить</button>
+                    <div class="customer-column">
+                        <h3>Ваши данные</h3>
+                        
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" name="subscribe" id="subscribe" checked>
+                            <label for="subscribe">Получать информацию о скидках и акциях</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Номер телефона</label>
+                            <input type="tel" name="phone" id="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Адрес доставки</label>
+                            <input type="text" name="address" id="address" required>
+                            <small>Доставка осуществляется только по Москве</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Время доставки:</label>
+                            <div class="radio-group">
+                                <input type="radio" name="delivery_time_type" id="asap" value="asap" required>
+                                <label for="asap">Как можно скорее</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="delivery_time_type" id="scheduled" value="scheduled" required>
+                                <label for="scheduled">К указанному времени</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="delivery_time">Укажите время доставки</label>
+                            <input type="time" name="delivery_time" id="delivery_time" 
+                                min="07:00" max="23:00" step="300">
+                            <small>Доступное время доставки с 7:00 до 23:00</small>
+                        </div>
+                        
+                        <div class="button-group">
+                            <button type="reset">Сбросить</button>
+                            <button type="submit">Отправить</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
-    </section>
+            </form>
+        </section>
 
         <footer id="contacts">
             <div class="container">

@@ -25,7 +25,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
+
 
 header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -119,7 +119,7 @@ nav a:hover,
     font-weight: 400;
 }
 
-/* Main */
+
 main {
     flex: 1;
     margin-bottom: 50px;
@@ -142,7 +142,7 @@ main {
     color: #555;
 }
 
-/* Labs Grid */
+
 .labs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -200,7 +200,7 @@ main {
     z-index: 1;
 }
 
-/* Footer */
+
 footer {
     background: #000000;
     padding: 30px 0;
@@ -214,7 +214,7 @@ footer p {
     font-size: 14px;
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
     .menu-btn {
         width: 40px;
@@ -324,4 +324,3 @@ footer p {
     }
 
 }
-

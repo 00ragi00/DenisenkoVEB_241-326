@@ -100,7 +100,7 @@ function updateOrderDisplay() {
         orderHTML += `<p class="category-title">${categoryNames[category]}</p>`;
 
         if (dish) {
-            orderHTML += `<p class="order-item">${dish.name} ${dish.price}₽</p>`;
+            orderHTML += `<p class="order-item order-item-selected">${dish.name} ${dish.price}₽</p>`;
             totalPrice += dish.price;
         } else {
             orderHTML += `<p class="order-item-empty">Блюдо не выбрано</p>`;
@@ -204,9 +204,17 @@ function handleFormReset(e) {
 }
 
 function filterDishes(grid, kind) {
-    grid.querySelectorAll('.menu-item').forEach(item => {
-        item.style.display = (item.dataset.kind === kind) ? 'flex' : 'none';
-    });
+    if (kind === 'cheap') {
+        // Для фильтра "дешевые" показываем только яблочный сок и черный чай
+        grid.querySelectorAll('.menu-item').forEach(item => {
+            const dishKeyword = item.dataset.dish;
+            item.style.display = (dishKeyword === 'applejuice' || dishKeyword === 'tea') ? 'flex' : 'none';
+        });
+    } else {
+        grid.querySelectorAll('.menu-item').forEach(item => {
+            item.style.display = (item.dataset.kind === kind) ? 'flex' : 'none';
+        });
+    }
 }
 
 function showAllDishes(grid) {

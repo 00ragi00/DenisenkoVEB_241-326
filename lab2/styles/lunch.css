@@ -7,7 +7,7 @@
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px; /* требуемый отступ */
+    gap: 10px;
 }
 
 /* Карточка блюда: Flex по вертикали */
@@ -77,6 +77,11 @@
     transition: background-color 0.25s ease, color 0.25s ease;
 }
 
+.menu-item button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(206,156,100,0.15);
+}
+
 
 @media (max-width: 800px) {
     .menu-grid {
@@ -101,9 +106,4 @@
   }
 
 
-}
-
-.menu-item button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(206,156,100,0.15);
 }

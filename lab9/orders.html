@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>История заказов — CityLunch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/orders.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+/>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-btn">
+                <span></span><span></span><span></span>
+            </label>
+            <h1>CityLunch — История заказов</h1>
+            <nav class="nav-menu">
+                <a href="../index.html">Навигация</a>
+                <a href="index.html">Главная</a>
+                <a href="lunch.html">Собрать ланч</a>
+                <a href="order.html">Оформить заказ</a>
+                <a href="orders.html">Заказы</a>
+                <a href="#contacts" id="active">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Citylunch - История заказов</h2>
+        <div id="notification" class="notification hidden"></div>
+        <table class="orders-table">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Дата оформления</th>
+                    <th>Состав заказа</th>
+                    <th>Стоимость</th>
+                    <th>Время доставки</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody id="orders-table-body">
+                <tr>
+                    <td colspan="6" class="loading">Загрузка заказов...</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Модальное окно просмотра -->
+    <div id="viewModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Просмотр заказа</h3>
+                <span class="close" data-modal="viewModal">&times;</span>
+            </div>
+            <div class="modal-body" id="view-modal-body"></div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-modal="viewModal">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно редактирования -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Редактирование заказа</h3>
+                <span class="close" data-modal="editModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="edit-form">
+                    <p><strong>Дата оформления:</strong> <span id="edit-date"></span></p>
+                    
+                    <h4>Доставка</h4>
+                    <label>Имя получателя</label>
+                    <input type="text" id="edit-full-name" required />
+                    
+                    <label>Адрес доставки</label>
+                    <input type="text" id="edit-address" required />
+                    
+                    <label>Время доставки</label>
+                    <input type="time" id="edit-time" step="300" min="07:00" max="23:00" />
+                    
+                    <label>Телефон</label>
+                    <input type="tel" id="edit-phone" required />
+                    
+                    <label>Email</label>
+                    <input type="email" id="edit-email" required />
+                    
+                    <label>Комментарий</label>
+                    <textarea id="edit-comment" rows="3"></textarea>
+                    
+                    <h4>Состав заказа</h4>
+                    <div id="edit-composition"></div>
+                    
+                    <p><strong>Стоимость:</strong> <span id="edit-cost"></span></p>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-modal="editModal">Отмена</button>
+                <button class="btn btn-primary" id="save-edit">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно удаления -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content small">
+            <div class="modal-header">
+                <h3>Удаление заказа</h3>
+                <span class="close" data-modal="deleteModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Вы уверены, что хотите удалить заказ?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-modal="deleteModal">Отмена</button>
+                <button class="btn btn-danger" id="confirm-delete">Да</button>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contacts">
+        <div class="container">
+            <p>© 2025 CityLunch</p>
+            <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+            <p>E-mail: <a href="mailto:info@citylunch.ru">info@citylunch.ru</a></p>
+            <p>Адрес: г. Москва, ул. Примерная, д. 10</p>
+        </div>
+    </footer>
+
+    <script src="scripts/orders.js"></script>
+</body>
+</html>
